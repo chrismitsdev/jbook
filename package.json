@@ -1,0 +1,18 @@
+{
+  "name": "jbook",
+  "description": "jBook application",
+  "private": true,
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel",
+    "clean": "lerna run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.7",
+    "lerna": "^8.2.0",
+    "rimraf": "^6.0.1"
+  },
+  "packageManager": "pnpm@10.4.1"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@chrismitsdev/local-api",
+  "description": "Local API package of jBook application",
+  "version": "1.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "ISC",
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "tsc",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "clean": "rimraf dist node_modules"
+  },
+  "dependencies": {
+    "@chrismitsdev/local-client": "workspace:*",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "typescript": "5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.4.1"
+}

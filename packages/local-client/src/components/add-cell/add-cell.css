@@ -1,0 +1,29 @@
+.add-cell {
+  position: relative;
+  margin-block: 10px;
+
+  .add-buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+  }
+
+  .divider {
+    position: absolute;
+    inset-block: 50%;
+    inset-inline: 5%;
+    background-color: gray;
+    height: 1px;
+    width: 90%;
+    z-index: -1;
+  }
+
+  &:not(.force-visible) {
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.1s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

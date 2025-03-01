@@ -1,0 +1,31 @@
+{
+  "name": "@chrismitsdev/jbook",
+  "description": "CLI package of jBook application",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "prepublishOnly": "pnpm build",
+    "build": "node ./build.js",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "clean": "rimraf dist node_modules"
+  },
+  "dependencies": {
+    "@chrismitsdev/local-client": "workspace:*"
+  },
+  "devDependencies": {
+    "@chrismitsdev/local-api": "workspace:*",
+    "commander": "^13.1.0",
+    "chalk": "^5.4.1",
+    "esbuild": "^0.25.0",
+    "typescript": "5.7.3"
+  },
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.4.1"
+}
